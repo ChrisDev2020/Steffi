@@ -59,7 +59,7 @@ public class TestHelloUnityVideo
 		// Sets the video encoding bitrate (Kbps).
 		config.bitrate = 800;
 		// Sets the adaptive orientation mode. See the description in API Reference.
-		config.orientationMode = ORIENTATION_MODE.ORIENTATION_MODE_FIXED_PORTRAIT;
+		config.orientationMode = ORIENTATION_MODE.ORIENTATION_MODE_FIXED_LANDSCAPE;
 		// Sets the video encoding degradation preference under limited bandwidth. MIANTAIN_QUALITY means to degrade the frame rate to maintain the video quality.
 		//config.degradationPreference = DEGRADATION_PREFERENCE.MAINTAIN_QUALITY;
 		config.degradationPreference = DEGRADATION_PREFERENCE.MAINTAIN_QUALITY;
