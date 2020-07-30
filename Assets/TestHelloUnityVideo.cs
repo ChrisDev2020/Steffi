@@ -37,6 +37,7 @@ public class TestHelloUnityVideo
 	}
 
 	void SetEngineConfiguration() {
+        Debug.Log("SetEngineConfiguration called");
 
 		// Create a VideoEncoderConfiguration instance. See the descriptions of the parameters in API Reference.
 		VideoEncoderConfiguration config = new VideoEncoderConfiguration();
@@ -58,10 +59,10 @@ public class TestHelloUnityVideo
 		// Sets the video encoding bitrate (Kbps).
 		config.bitrate = 800;
 		// Sets the adaptive orientation mode. See the description in API Reference.
-		config.orientationMode = ORIENTATION_MODE.ORIENTATION_MODE_ADAPTIVE;
+		config.orientationMode = ORIENTATION_MODE.ORIENTATION_MODE_FIXED_PORTRAIT;
 		// Sets the video encoding degradation preference under limited bandwidth. MIANTAIN_QUALITY means to degrade the frame rate to maintain the video quality.
 		//config.degradationPreference = DEGRADATION_PREFERENCE.MAINTAIN_QUALITY;
-		config.degradationPreference = DEGRADATION_PREFERENCE.MAINTAIN_BALANCED;
+		config.degradationPreference = DEGRADATION_PREFERENCE.MAINTAIN_QUALITY;
 		// Sets the video encoder configuration.
 		mRtcEngine.SetVideoEncoderConfiguration(config);
 	}
